@@ -17,5 +17,5 @@ fi
 
 cat $BALANCE_FILEPATH | grep -q $balance
 if [[ $? -ne 0 ]]; then # send notification using Pipedream
-  curl -s -d "{balance:$balance}" -H "Content-Type: text/plain" $WEBHOOK
+  curl -s -d "{balance:$balance}" -H "Content-Type: application/json" $WEBHOOK
 fi
